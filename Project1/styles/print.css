@@ -1,0 +1,6 @@
+@media print {
+    body section {
+        content: "Este es un medio impreso";
+        display: none;
+    }
+}

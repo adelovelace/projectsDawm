@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Hurricane&display=swap');
 
-*{
+* {
     font-family: 'Comic Neue', cursive;
 }
 
-body{
+body {
     background-color: #ECF2F7;
     min-height: 100vh;
     display: flex;
@@ -12,7 +12,7 @@ body{
 }
 
 h1 {
-    
+
     font-family: 'Hurricane', cursive;
     font-size: 128px;
     text-align: center;
@@ -24,38 +24,64 @@ h2 {
     color: #39268C;
 }
 
-#backgroundImage{
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 2.1fr 0.5fr; 
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title title"
+        "socialMedia backgroundImage audio"
+}
+
+
+
+#title {
+    grid-area: title;
+}
+
+
+#socialMedia {
+    grid-area: socialMedia;
+}
+
+#audio {
+    grid-area: audio;
+}
+
+
+#backgroundImage {
+    grid-area: image;
     display: flex;
     justify-content: center;
     height: 500px;
 }
 
-.bubbleImage{
-    position:absolute;
-    z-index:1;
+.bubbleImage {
+    position: absolute;
+    z-index: 1;
 }
 
-.coralImage{
-    position:absolute;
-    z-index:1;
+.coralImage {
+    position: absolute;
+    z-index: 1;
 }
 
-#Menu{
-    position:fixed;
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
-#menuGrid {
-    position: fixed;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 5px 5px; 
-    justify-content: center; 
-    align-content: center; 
-    justify-items: center; 
+
+#Menu {
+    display: inline;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
     align-items: center;
     background-color: white;
     
+
 }
-
-

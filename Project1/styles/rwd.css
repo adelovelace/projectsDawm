@@ -1,0 +1,19 @@
+@media screen {
+
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        /* Styles */
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
