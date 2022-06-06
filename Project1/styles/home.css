@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Hurricane&display=swap');
+
+*{
+    font-family: 'Comic Neue', cursive;
+}
+
+body{
+    background-color: #ECF2F7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    
+    font-family: 'Hurricane', cursive;
+    font-size: 128px;
+    text-align: center;
+
+}
+
+h2 {
+    font-family: 'DM Mono', monospace;
+    color: #39268C;
+}
+
+#backgroundImage{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.bubbleImage{
+    position:absolute;
+    z-index:1;
+}
+
+.coralImage{
+    position:absolute;
+    z-index:1;
+}
+
+#Menu{
+    position:fixed;
+}
+
+#menuGrid {
+    position: fixed;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 5px 5px; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center;
+    background-color: white;
+    
+}
+
+
