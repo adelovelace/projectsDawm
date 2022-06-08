@@ -1,39 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Hurricane&display=swap');
 
-*{
+* {
     font-family: 'Comic Neue', cursive;
 }
 
-body{
+body {
     background-color: #ECF2F7;
 }
 
 h1 {
-    
+
     font-family: 'DM Mono', monospace;
     font-size: 128px;
     text-align: center;
 
 }
 
+header {
+    background-color: white;
+    padding: 0;
+    width: 100%;
+}
+
+#title {
+    background-color: white;
+    width: 100%;
+    margin: 0vh;
+}
+
 h2 {
     font-family: 'DM Mono', monospace;
     color: #39268C;
+    text-align: center;
 }
 
-
-#menuGrid {
-    position: fixed;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 5px 5px; 
-    justify-content: center; 
-    align-content: center; 
-    justify-items: center; 
+.aboutUsContent {
+    display: flex;
     align-items: center;
-    background-color: white;
-    
+    justify-content: center;
+
 }
 
+#info {
+    display: flexbox;
+    width: 50%;
+    height: auto;
+    text-align: justify;
+}
 
+#itemEven {
+    font-size:x-large;
+}
+
+#itemEven:after {
+    list-style-image: url("../images/pez-payaso.png");
+    scale: 10%;
+}
+
+#itemOdd {
+    font-size: x-large;
+}
+
+#itemOdd:after{
+    list-style-image: url("../images/pez.png");
+    scale: 210%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 0.25fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "menu"
+        "aboutUsContent"
+        "colaboratorsContent";
+}
+
+.menu {
+    grid-area: menu;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+a{
+    padding-left: 5%;
+    text-decoration: none;
+}
+
+.aboutUsContent {
+    grid-area: aboutUsContent;
+}
+
+.colaboratorsContent{
+    grid-area: colaboratorsContent;
+}
