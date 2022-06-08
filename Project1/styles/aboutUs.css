@@ -102,16 +102,22 @@ a{
 
 .colaboratorsContent{
     grid-area: colaboratorsContent;
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+#testing{
     align-items: center;
     justify-content: center;
 }
 
 ul{
-    display: flexbox;
-    width: 50%;
-    height: auto;
+    
     text-align: justify;
     font-family: 'Commissioner', sans-serif;
     font-size: x-large;
 }
+
+
