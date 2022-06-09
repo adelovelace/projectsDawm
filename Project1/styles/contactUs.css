@@ -1,39 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Hurricane&display=swap');
 
-*{
+* {
     font-family: 'Comic Neue', cursive;
 }
 
-body{
+header {
+    background-color: white;
+    padding: 0;
+    width: 100%;
+}
+
+body {
     background-color: #ECF2F7;
+    margin: 0;
 }
 
 h1 {
-    
+
     font-family: 'DM Mono', monospace;
     font-size: 128px;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 
 }
 
 h2 {
     font-family: 'DM Mono', monospace;
     color: #39268C;
+    text-align: center;
+}
+
+#title {
+    background-color: white;
+    width: 100%;
+    margin: 0vh;
 }
 
 
-#menuGrid {
-    position: fixed;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 5px 5px; 
-    justify-content: center; 
-    align-content: center; 
-    justify-items: center; 
+.container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "menu"
+        "mainContainer";
+}
+
+.menu {
+    grid-area: menu;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
+    justify-items: center;
+}
+
+a{
+    padding-left: 5%;
+    text-decoration: none;
+}
+
+.mainContainer {
+    grid-area: mainContainer;
+    display: block ruby;
+    height: auto;
+    grid-template-columns: 1.8fr 0.2fr;
+    grid-template-rows: 1fr;
+    gap: 25px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "formular"
+        "socialMedia";
+    padding-left: 20%;
+}
+
+#formular{
+    grid-area: formular;
+    display: grid;
+    align-items: center;
+    padding-right: 20%;
     background-color: white;
-    
+    width: 60%;
+    height: 100%;
+}
+
+#socialMedia{
+    grid-area: socialMedia;
+    display: grid;
+    align-items: center;
+}
+
+#socialMedia > img{
+    margin-bottom: 2%;
+    width: 3%;
 }
 
 

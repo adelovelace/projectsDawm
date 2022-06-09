@@ -4,6 +4,12 @@
     font-family: 'Comic Neue', cursive;
 }
 
+header {
+    background-color: white;
+    padding: 0;
+    width: 100%;
+}
+
 body {
     background-color: #ECF2F7;
     margin: 0;
@@ -19,11 +25,6 @@ h1 {
 
 }
 
-header {
-    background-color: white;
-    padding: 0;
-    width: 100%;
-}
 
 #title {
     background-color: white;
