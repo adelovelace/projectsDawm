@@ -83,8 +83,8 @@ footer{
 }
 
 
-#Menu {
-    display: inline;
+#menu {
+    display: grid;
     justify-content: center;
     align-content: center;
     justify-items: center;

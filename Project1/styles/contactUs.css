@@ -37,12 +37,11 @@ h2 {
     margin: 0vh;
 }
 
-
 .container {
-
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.01fr 1fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -58,44 +57,169 @@ h2 {
     justify-items: center;
 }
 
-a{
+.menu>a {
     padding-left: 5%;
     text-decoration: none;
 }
 
+
 .mainContainer {
-    grid-area: mainContainer;
-    display: block ruby;
-    height: auto;
+    display: grid;
     grid-template-columns: 1.8fr 0.2fr;
     grid-template-rows: 1fr;
-    gap: 25px 0px;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "formular"
-        "socialMedia";
-    padding-left: 20%;
+        "formularContainer socialMedia";
+    grid-area: mainContainer;
+    padding-top: 5%;
 }
 
-#formular{
-    grid-area: formular;
+.formularContainer {
     display: grid;
-    align-items: center;
-    padding-right: 20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "firstName lastName"
+        "email email"
+        "message message"
+        "sendButton sendButton";
+    grid-area: formularContainer;
+    padding-left: 25%;
+    padding-right: 10%;
+    align-content: center;
+    background-clip: content-box;
     background-color: white;
-    width: 60%;
-    height: 100%;
+
 }
 
-#socialMedia{
-    grid-area: socialMedia;
+.formularContainer div {
+
     display: grid;
-    align-items: center;
+    width: 100%;
+    padding-bottom: 2%;
+
+
 }
 
-#socialMedia > img{
-    margin-bottom: 2%;
-    width: 3%;
+.formularContainer label {
+    font-family: 'DM Mono', monospace;
+    font-size: x-large;
+    color: #39268C;
+
+}
+
+.firstName {
+    grid-area: firstName;
+    width: 100%;
+    align-items: center !important;
+    padding-left: 6%;
+}
+
+.firstName input {
+    width: 90%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #39268C;
+    padding-top: 3%;
+    font-size: x-large;
+}
+
+.lastName {
+    grid-area: lastName;
+}
+
+.lastName input {
+    width: 90%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #39268C;
+    padding-top: 3%;
+    font-size: x-large;
+}
+
+.email {
+    grid-area: email;
+    padding-left: 3%;
+}
+
+.email input {
+    width: 90%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #39268C;
+    padding-top: 3%;
+    font-size: x-large;
 }
 
 
+.message {
+    grid-area: message;
+    padding-left: 3%;
+}
+
+.message input {
+    width: 90%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #39268C;
+    padding-top: 3%;
+    font-size: x-large;
+}
+
+.sendButton{
+    grid-area: sendButton;
+    width: 20%;
+    justify-content: right;
+}
+
+.sendButton button{
+    width: max-content;
+    padding: 1%;
+    border-radius: 5%;
+    border:none;
+    color:white;
+    font-weight: bolder;
+    background-color: #39268C;
+    font-size: x-large;
+   
+
+    
+
+}
+
+.socialMedia {
+    grid-area: socialMedia;
+    display: flex;
+    align-items:  left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.socialMedia img {
+    margin-bottom: 5%;
+    width: 40%;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    
+}
+
+.footer img{
+    width: 10%;
+}
