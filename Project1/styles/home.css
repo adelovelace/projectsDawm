@@ -53,7 +53,7 @@ h2 {
 .socialMedia {
     grid-area: socialMedia;
     display: flex;
-    align-items:  right;
+    align-items: right;
     justify-content: center;
     flex-direction: column;
 }
@@ -66,50 +66,16 @@ h2 {
 .audio {
     grid-area: audio;
     display: flex;
-    align-items:  left;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
 }
 
-.audio div|{
-    padding-top: 50%;
-}
-
 .audio img {
-    
+
     margin-bottom: 5%;
     width: 30%;
 }
-
-
-/* .container {
-    display: grid;
-    grid-template-columns: 0.5fr 2.1fr 0.5fr; 
-    grid-template-rows: 1fr 1.5fr 0.5fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "title title title"
-        "socialMedia backgroundImage audio"
-}
-
-
-
-.title {
-    grid-area: title;
-}
-
-
-#socialMedia {
-    grid-area: socialMedia;
-}
-
-#audio {
-    grid-area: audio;
-} */
-
-
-
 
 .bubbleImage {
     position: absolute;
