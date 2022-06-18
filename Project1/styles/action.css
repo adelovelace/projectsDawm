@@ -141,12 +141,12 @@ table {
     background-color: white;
     align-content: center;
     text-align: center;
-    background-color: #eee;
     border-collapse: collapse;
+    font-weight: 500;
 }
 
 table th {
-    background-color: #000;
+    background-color:#337aa4 ;
     color: white;
     width: 50%;
 }
