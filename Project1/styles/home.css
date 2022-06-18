@@ -16,8 +16,10 @@ h1 {
     font-family: 'Hurricane', cursive;
     font-size: 128px;
     text-align: center;
-
+    margin-bottom: 0;
+    
 }
+
 
 
 h2 {
@@ -27,57 +29,64 @@ h2 {
 
 .container {
     display: grid;
-    grid-template-columns: 0.4fr 2.2fr 0.4fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.7fr 0.1fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "title title title"
-        "socialMedia backgroundImage audio";
+        "title"
+        "backgroundImage"
+        "media";
+    height: 100%;
 }
 
 .title {
     grid-area: title;
     width: 100%;
     margin: 0vh;
+    height: min-content;
 }
 
 .backgroundImage {
     grid-area: backgroundImage;
     display: flex;
     justify-content: center;
-    height: 50%;
+    align-items: center;
+    height: max-content;
+    margin-top: 20%;
+    padding-bottom: 20%;
+   
+}
+
+.media{
+    grid-area: media;
+    display: inline-flex;
+    padding-left: 5%;
+    width: 100%;
+    /* margin-bottom: 0;
+    min-height: 0vh; */
 }
 
 .socialMedia {
-    grid-area: socialMedia;
     display: flex;
     align-items: right;
     justify-content: center;
     flex-direction: column;
-    margin-top: 100%;
+    margin-right: 50%;
 }
 
+
 .socialMedia img {
-    margin-bottom: 5%;
-    width: 30%;
+    width: 10%;
 }
 
 .audioP {
     grid-area: audio;
     display: flex;
-    align-items: left;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100%
+    align-items: center;
+ 
 }
-
-/* .audioP img {
-
-    margin-bottom: 5%;
-    width: 30%;
-} */
 
 .bubbleImage {
     position: absolute;
@@ -110,6 +119,11 @@ h2 {
     padding-left: 5%;
     text-decoration: none;
 }
+
+h2 a:hover {
+    color: #337aa4;
+}
+
 
 footer {
     position: absolute;
