@@ -53,23 +53,6 @@ h2 {
     font-size: x-large;
 }
 
-#itemEven {
-    font-size:x-large;
-}
-
-#itemEven:after {
-    list-style-image: url("../images/pez-payaso.png");
-    scale: 10%;
-}
-
-#itemOdd {
-    font-size: x-large;
-}
-
-#itemOdd:after{
-    list-style-image: url("../images/pez.png");
-    scale: 210%;
-}
 
 .container {
     display: grid;
@@ -108,16 +91,51 @@ a{
     height: auto;
 }
 
-#testing{
-    align-items: center;
-    justify-content: center;
+
+.listColaborators{
+    padding-left: 30%;
+    padding-right: 30%;
 }
 
 ul{
-    
     text-align: justify;
     font-family: 'Commissioner', sans-serif;
     font-size: x-large;
+    
 }
 
 
+#itemEven {
+    font-size:x-large;
+    padding-bottom: 3%;
+    list-style-image: url("../images/pez-payaso-klein.png");
+}
+
+
+
+#itemOdd {
+    font-size: x-large;
+    padding-bottom: 3%;
+    list-style-image: url("../images/pez-klein.png");
+ 
+}
+
+.footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    
+}
+
+.footer img{
+    width: 10%;
+}
+
+
+#coralRight{
+    margin-left: 79%;
+}
