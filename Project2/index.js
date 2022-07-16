@@ -61,7 +61,7 @@ let loadData = () => {
             let s_Breweries = document.getElementById("state-breweries")
 
             plantilla = `<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-            Estado con más cevecerías</div>
+            State with more breweries</div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">${top}: ${topNum}</div>`
 
             s_Breweries.innerHTML = plantilla
@@ -95,7 +95,7 @@ let loadData = () => {
             let c_Breweries = document.getElementById("city-breweries")
 
             plantilla = `<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-            Ciudad con más cevecerías</div>
+            City with more breweries</div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">${top}: ${topNum}</div>`
 
             c_Breweries.innerHTML = plantilla
