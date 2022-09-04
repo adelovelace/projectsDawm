@@ -1,15 +1,34 @@
-part of 'app_pages.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:myorganizer/app/views/screens/home.dart';
+import 'package:myorganizer/app/views/screens/login.dart';
+import 'package:myorganizer/app/views/screens/signup.dart';
+import 'package:myorganizer/app/views/screens/welcome.dart';
 
 abstract class Routes {
-  Routes._();
-  static const HOME = _Paths.HOME;
-  static const SPLASH = _Paths.SPLASH;
-  static const LOGIN = _Paths.LOGIN;
+  static const HOME = "/home";
+  static const WELCOME = "/welcome";
+  static const LOGIN = "/login";
+  static const SIGNUP = "/signup";
 }
 
-abstract class _Paths {
-  _Paths._();
-  static const HOME = "/home";
-  static const SPLASH = "/splash";
-  static const LOGIN = "/login";
-}
+final appPages = [
+  GetPage(
+    name: Routes.WELCOME,
+    page: () => const WelcomeScreen(),
+  ),
+  GetPage(
+    name: Routes.LOGIN,
+    page: () => const LoginScreen(),
+    // middlewares: [
+    //   PremiumGuard(),
+    // ],
+  ),
+  GetPage(
+    name: Routes.SIGNUP,
+    page: () => const SignupScreen(),
+  ),
+  GetPage(
+    name: Routes.HOME,
+    page: () => const HomeScreen(),
+  ),
+];
