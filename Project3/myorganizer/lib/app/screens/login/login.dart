@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myorganizer/app/views/screens/signup.dart';
+import 'package:myorganizer/app/routes/app_routes.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -85,14 +85,17 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 100,
               ),
-              Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                    color: Color.fromRGBO(57, 38, 140, 1)),
-                height: 50,
-                width: 86,
-                child: const Center(
-                  child: Text('Login', style: TextStyle(color: Colors.white)),
+              ElevatedButton(
+                child: const Text('Login'),
+                onPressed: () {
+                  Get.offAndToNamed(Routes.HOME);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromRGBO(
+                      57, 38, 140, 1), // background (button) color
+                  foregroundColor: Colors.white,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 43, vertical: 25),
                 ),
               ),
               const SizedBox(
@@ -108,7 +111,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                   InkWell(
                       onTap: () {
-                        Get.to(const SignupScreen());
+                        // Get.to(const SignupScreen());
+                        Get.offAndToNamed(Routes.SIGNUP);
                       },
                       child: const Text(
                         'Register',
