@@ -43,7 +43,7 @@ final appPages = [
   ),
   GetPage(
     name: Routes.NOTES,
-    page: () => const NotesScreen(),
+    page: () => NotesScreen(),
   ),
   GetPage(
     name: Routes.PROFILE,

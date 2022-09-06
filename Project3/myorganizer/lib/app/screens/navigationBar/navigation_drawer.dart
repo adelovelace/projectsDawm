@@ -8,81 +8,87 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Container(
-        child: ListView(
-          children: [
-            buildDrawerHeader(),
-            const Divider(
-              color: Colors.grey,
-            ),
-            buildDrawerItem(
-              icon: Icons.account_circle,
-              text: "Profile",
-              onTap: () => navigate(0),
-              tileColor:
-                  Get.currentRoute == Routes.PROFILE ? Colors.blue : null,
-              textIconColor: Get.currentRoute == Routes.PROFILE
+      child: ListView(
+        children: [
+          buildDrawerHeader(),
+          // const Divider(
+          //   color: Colors.grey,
+          // ),
+          buildDrawerItem(
+            icon: Icons.account_circle,
+            text: "Profile",
+            onTap: () => navigate(0),
+            tileColor: Get.currentRoute == Routes.PROFILE
+                ? const Color.fromRGBO(57, 38, 140, 1)
+                : null,
+            textIconColor: Get.currentRoute == Routes.PROFILE
+                ? Colors.white
+                : Colors.black,
+          ),
+          buildDrawerItem(
+            icon: Icons.calendar_month,
+            text: "Calendar",
+            onTap: () => navigate(1),
+            tileColor: Get.currentRoute == Routes.CALENDAR
+                ? const Color.fromRGBO(57, 38, 140, 1)
+                : null,
+            textIconColor: Get.currentRoute == Routes.CALENDAR
+                ? Colors.white
+                : Colors.black,
+          ),
+          buildDrawerItem(
+            icon: Icons.note,
+            text: "Notes",
+            onTap: () => navigate(2),
+            tileColor: Get.currentRoute == Routes.NOTES
+                ? const Color.fromRGBO(57, 38, 140, 1)
+                : null,
+            textIconColor:
+                Get.currentRoute == Routes.NOTES ? Colors.white : Colors.black,
+          ),
+          buildDrawerItem(
+            icon: Icons.savings,
+            text: "Budget",
+            onTap: () => navigate(3),
+            tileColor: Get.currentRoute == Routes.BUDGET
+                ? const Color.fromRGBO(57, 38, 140, 1)
+                : null,
+            textIconColor:
+                Get.currentRoute == Routes.BUDGET ? Colors.white : Colors.black,
+          ),
+          buildDrawerItem(
+              icon: Icons.alarm,
+              text: "Alarms",
+              onTap: () => navigate(4),
+              tileColor: Get.currentRoute == Routes.ALARM
+                  ? const Color.fromRGBO(57, 38, 140, 1)
+                  : null,
+              textIconColor: Get.currentRoute == Routes.ALARM
                   ? Colors.white
-                  : Colors.black,
-            ),
-            buildDrawerItem(
-              icon: Icons.calendar_month,
-              text: "Calendar",
-              onTap: () => navigate(1),
-              tileColor:
-                  Get.currentRoute == Routes.CALENDAR ? Colors.blue : null,
-              textIconColor: Get.currentRoute == Routes.CALENDAR
-                  ? Colors.white
-                  : Colors.black,
-            ),
-            buildDrawerItem(
-              icon: Icons.note,
-              text: "Notes",
-              onTap: () => navigate(2),
-              tileColor: Get.currentRoute == Routes.NOTES ? Colors.blue : null,
-              textIconColor: Get.currentRoute == Routes.NOTES
-                  ? Colors.white
-                  : Colors.black,
-            ),
-            buildDrawerItem(
-              icon: Icons.savings,
-              text: "Budget",
-              onTap: () => navigate(3),
-              tileColor: Get.currentRoute == Routes.BUDGET ? Colors.blue : null,
-              textIconColor: Get.currentRoute == Routes.BUDGET
-                  ? Colors.white
-                  : Colors.black,
-            ),
-            buildDrawerItem(
-                icon: Icons.alarm,
-                text: "Alarms",
-                onTap: () => navigate(4),
-                tileColor:
-                    Get.currentRoute == Routes.ALARM ? Colors.blue : null,
-                textIconColor: Get.currentRoute == Routes.ALARM
-                    ? Colors.white
-                    : Colors.black),
-          ],
-        ),
+                  : Colors.black),
+        ],
       ),
     );
   }
 
   Widget buildDrawerHeader() {
     return const UserAccountsDrawerHeader(
-      accountName: Text("Ripples Code"),
-      accountEmail: Text("ripplescode@gmail.com"),
+      decoration: BoxDecoration(color: Colors.white),
+      accountName: Text("Ripples Code", style: TextStyle(color: Colors.black)),
+      accountEmail:
+          Text("ripplescode@gmail.com", style: TextStyle(color: Colors.black)),
       currentAccountPicture: CircleAvatar(
         backgroundImage: AssetImage('images/mujer-de-negocios1.png'),
       ),
       currentAccountPictureSize: Size.square(72),
-      otherAccountsPictures: [
-        CircleAvatar(
-          backgroundColor: Colors.white,
-          child: Text("RC"),
-        )
-      ],
-      otherAccountsPicturesSize: Size.square(50),
+
+      // otherAccountsPictures: [
+      //   CircleAvatar(
+      //     backgroundColor: Colors.white,
+      //     child: Text("RC"),
+      //   )
+      // ],
+      // otherAccountsPicturesSize: Size.square(50),
     );
   }
 
